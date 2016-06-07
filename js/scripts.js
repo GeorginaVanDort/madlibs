@@ -1,11 +1,28 @@
 $(document).ready(function() {
   $("#blanks form").submit(function(event) {
+    var blanks = ["person1", "person2", "animal", "exclamation", "verb", "noun", "extra"];
+    //console.log(blanks[1]);
 
-    var blanks = ["person1", "person2", "animal", "exclamation", "verb", "noun"];
-    blanks.forEach(function(blank) {
-      var input = $("input#" + blank).val();
-      $("." + blank).text(input);
-    });
+
+// i += 2 != i++
+    for (var i = 0; i < blanks.length; i++) {
+      // console.log(blanks[i]);
+      var input = $("input#" + blanks[i]).val();
+       $("." + blanks[i]).append(input);
+    }
+
+
+
+
+
+
+
+    //
+    // var blanks = ["person1", "person2", "animal", "exclamation", "verb", "noun"];
+    // blanks.forEach(function(blank) {
+    //   var input = $("input#" + blank).val();
+    //   $("." + blank).text(input);
+    // });
 
 
 
